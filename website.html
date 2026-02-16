@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My BABYYY ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* FIRST PAGE */
+#questionPage {
+    width: 100%;
+    height: 100vh;
+    background: #87CEFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#yesBtn {
+    background: white;
+    color: #87CEFA;
+}
+
+#noBtn {
+    background: white;
+    color: #87CEFA;
+    position: absolute;
+}
+
+/* SECOND PAGE */
+#secondPage {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: #87CEFA;
+    position: relative;
+    overflow: hidden;
+}
+
+#centerTitle {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    z-index: 10;
+}
+
+#romanticMessage {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    width: 40%;
+    font-size: 20px;
+    line-height: 1.6;
+    z-index: 10;
+}
+
+/* THIRD PAGE */
+#thirdPage {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #87CEFA, #ff4d6d, #ff99c8);
+    background-size: 300% 300%;
+    animation: romanticFade 2s ease-in-out infinite alternate;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+}
+
+@keyframes romanticFade {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+#finalMessage {
+    max-width: 800px;
+    font-size: 22px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeInFinal 3s ease forwards;
+    z-index: 10;
+}
+
+@keyframes fadeInFinal {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating elements */
+.floatElement {
+    position: absolute;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Flowing images */
+.flowImage {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 20px;
+    animation: flowUp 10s linear infinite;
+}
+
+@keyframes flowUp {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-150px); opacity: 0; }
+}
+
+/* Popup */
+#popup {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: white;
+    padding: 18px 22px;
+    border-radius: 12px;
+    z-index: 20;
+}
+
+#popup p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+#popup button {
+    background: #87CEFA;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- FIRST PAGE -->
+<div id="questionPage">
+    <h2>Do you want a Birthday Wish BABYYY? 💝</h2>
+    <button id="yesBtn" onclick="startExperience()">YES 💖</button>
+    <button id="noBtn">NO 🙈</button>
+</div>
+
+<!-- SECOND PAGE -->
+<div id="secondPage">
+
+    <div id="centerTitle">
+        Happy Birthday Gopika 💙
+    </div>
+
+    <div id="romanticMessage">
+        If loving you is my sin,<br>
+        then I’ll kneel in the dark<br>
+        and confess your name forever.<br><br>
+
+        You are the danger<br>
+        my heart runs toward — not away from.<br><br>
+
+        I don’t crave heaven…<br>
+        I crave the chaos in your kiss.<br><br>
+
+        <strong>Love youu daa 💙</strong>
+    </div>
+
+    <div id="popup">
+        <p>Wanna go to next page? 💙</p>
+        <button onclick="goToThird()">Go to next page</button>
+    </div>
+
+</div>
+
+<!-- THIRD PAGE -->
+<div id="thirdPage">
+    <div id="finalMessage">
+        I don’t know how to explain what you mean to me  
+        without my voice shaking a little…<br><br>
+
+        You came into my life quietly,  
+        but you changed it loudly.<br><br>
+
+        You taught me what real love feels like —  
+        not perfect, not easy, but honest and deep.<br><br>
+
+        No matter where life takes you,  
+        I will always pray for your happiness,  
+        your success, and your peace.<br><br>
+
+        You deserve a world full of beautiful things.<br><br>
+
+        And if one day life takes us to different paths,  
+        I want you to know that a part of my heart  
+        will always belong to you.....*LOVE 💙
+    </div>
+</div>
+
+<audio id="bgMusic" src="music.mp3"></audio>
+
+<script>
+const images = ["1.jpg.jpg","2.jpg.jpg","3.jpg.jpg","4.jpg.jpg","5.jpg.jpg","6.jpg.jpg"];
+const music = document.getElementById("bgMusic");
+
+let playCount = 0;
+const maxPlays = 25;
+
+music.addEventListener("ended", function() {
+    playCount++;
+    if (playCount < maxPlays) {
+        music.play();
+    }
+});
+
+function startExperience() {
+    document.getElementById("questionPage").style.display = "none";
+    document.getElementById("secondPage").style.display = "block";
+    music.play();
+    setInterval(createFlowImage, 800);
+
+    setTimeout(() => {
+        document.getElementById("popup").style.display = "block";
+    }, 3000);
+}
+
+function goToThird() {
+    document.getElementById("secondPage").style.display = "none";
+    document.getElementById("thirdPage").style.display = "flex";
+    setInterval(createFloatingElements, 400);
+}
+
+function createFlowImage() {
+    const img = document.createElement("img");
+    img.src = images[Math.floor(Math.random() * images.length)];
+    img.classList.add("flowImage");
+    img.style.left = Math.random() * (window.innerWidth - 120) + "px";
+    document.getElementById("secondPage").appendChild(img);
+    setTimeout(() => img.remove(), 10000);
+}
+
+function createFloatingElements() {
+    const element = document.createElement("div");
+    element.classList.add("floatElement");
+
+    const symbols = ["🤍", "💙", "😘"];
+    element.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+
+    element.style.left = Math.random() * 100 + "vw";
+    element.style.fontSize = Math.random() * 20 + 20 + "px";
+
+    document.getElementById("thirdPage").appendChild(element);
+
+    setTimeout(() => element.remove(), 6000);
+}
+
+function createWhiteHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("floatElement");
+    heart.innerHTML = "🤍";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    document.getElementById("questionPage").appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createWhiteHeart, 300);
+
+const noBtn = document.getElementById("noBtn");
+noBtn.addEventListener("mouseover", function() {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+</script>
+
+</body>
+</html>
