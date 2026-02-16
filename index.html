@@ -164,6 +164,42 @@ button {
     border-radius: 8px;
     border: none;
 }
+/* MOBILE FIX */
+@media screen and (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 28px !important;
+        text-align: center;
+    }
+
+    #finalMessage {
+        font-size: 16px !important;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .floatingImage {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    #nextPopup {
+        width: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        text-align: center;
+    }
+
+    #nextPopup button {
+        width: 100%;
+    }
+}
+    
 </style>
 </head>
 
@@ -307,4 +343,5 @@ noBtn.addEventListener("mouseover", function() {
 
 </body>
 </html>
+
 
